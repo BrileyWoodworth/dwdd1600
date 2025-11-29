@@ -1,0 +1,272 @@
+/*box sizing! to avoid problems in other browsers*/
+* {box-sizing: border-box;}
+
+
+/*font famliy*/
+body {
+    font-family: "Lora", serif;
+    margin: 0;
+
+}
+
+/*header*/
+header {
+    background-color: #ffe0e0;
+    padding: 1rem 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header image{
+    width: 10px;
+    height: auto;
+}
+
+header span {
+    color: #20222B;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/*navigation*/
+
+/* small screen navigation */
+@media only screen and (max-width: 800px) {
+nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        display: block;
+        text-align: center;
+        padding: .8rem;
+        color:#fdefe2;
+        text-decoration: none;
+        background-color: #c93651;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    nav .active a {
+        background-color:#fdefe2;
+        color: #b80037;
+        background-image: linear-gradient(to bottom, white, #ffe0e0);
+    }
+}/* end small screens */
+
+
+/* large screen navigation */
+@media only screen and (min-width: 801px) {
+nav {
+    background-color: #c93651;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0 10px;
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 0.83rem 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fdefe2;
+    font-weight: 700;
+}
+
+nav li.active a {
+    background-color: #fdefe2;
+    color: #b80037;
+}
+
+
+nav li a:hover {
+    color: #20222B;
+}
+    } /* end large screens */
+
+
+
+/*main*/
+main {
+    padding: 1rem 10px;
+}
+
+main h1 {
+    color: #b80037;
+}
+
+main h2 {
+    color: #c93651;
+    margin-bottom: .2rem;
+}
+
+main h3 {
+    color: #20222B
+}
+
+main p {
+    margin: 0;
+    color: #20222B;
+}
+
+main ol {
+    font-size: .9rem;
+    padding: .5rem 30px;
+    background-color: #fdefe2;
+}
+
+main dl dt {
+    color: #F25252;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+main dl dd {
+    color: #20222B;
+    font-size: .9rem;
+    margin-left: 20px;
+}
+
+main ul {
+    list-style-type: circle;
+}
+
+main ul li {
+    line-height: 125%;
+    margin-bottom: .4rem;
+    font-size: .9rem;
+}
+
+main h2 strong {
+    font-weight: 700;
+    color: #b80037;
+}
+
+main em {
+    font-weight: 400;
+}
+
+main address {
+    font-style: normal;
+    background-color: #ffe0e0;
+    padding: .5rem;
+    border-radius: 10px;
+    border: 0.25px solid #c93651;
+    width: 200px;
+}
+
+main a {
+    color: #F25252
+}
+
+main a:hover {
+    color: RGB(184, 0, 55);
+}
+
+/*main image stuff here*/
+figure.wrapped{
+    margin: 60px 0 0 10px;
+    width: 35%;
+    float: right;
+}
+figure.wrapped img{
+    width: 100%;
+    height: auto;
+}
+figure.wrapped figcaption{
+    text-align: center;
+    font-size: .75rem;
+}
+
+/*gallery stuff*/
+div.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+}
+div.gallery figure{
+    margin: 0;
+}
+div.gallery figcaption{
+    text-align: center;
+    font-size: .8rem;
+    color: #20222B;
+}
+
+.gallery img {
+    width: 98%;
+    height: auto;
+    border-radius: 3px ;
+}
+.gallery img:hover {
+ box-shadow: 0px 0px 15px rgba(242,82,82,0.7);
+}
+
+
+/*form stuff*/
+.event-questions fieldset {
+    border: 1px solid #b80037;
+    border-width: 2px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.event-questions legend {
+    color:#b80037;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.event-questions label {
+    margin: 0.4rem;
+}
+.event-questions label, .event-questions select, .event-questions [type=text], .event-questions [type=tel], .event-questions [type=email], .event-questions textarea {
+    display: block;
+}
+.event-questions [type=text], .event-questions [type=tel], .event-questions [type=email], .event-questions textarea, .event-questions select {
+    border: solid 1px #20222B;
+    border-radius: .3rem;
+    padding: .3rem;
+    font-family: "Lora", serif;
+    background-color:rgba(253,239,226,0.7);
+}
+.event-questions [type=text], .event-questions [type=tel], .event-questions [type=email], .event-questions textarea {
+    width: 300px;
+}
+.event-questions textarea{
+    height: 12rem;
+    width: 95%;
+}
+.event-questions [type=submit] {
+    background-color: #F25252;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    margin: 1rem 0 0 0.4vw;
+}
+
+/*footer*/
+footer {
+    background-color: #fdefe2;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: .8rem;
+    color: #20222B;
+    letter-spacing: 1.5px;
+}
+
+/*putting a max on how long the lines of text go*/
+header, nav, main, footer {
+max-width: 75rem;
+margin: 0 auto;
+}
+
